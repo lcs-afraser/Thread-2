@@ -1,9 +1,3 @@
-//: [Previous](@previous) / [Next](@next)
-/*:
-## Canvas size
- 
- Set the size of your desired canvas by adjusting the constants on lines 7 and 8.
- */
 let preferredWidth = 600
 let preferredHeight = 600
 /*:
@@ -29,7 +23,7 @@ let p = Pen(drawingUpon: canvas)
 // Show the canvas in the playground's live view
 PlaygroundPage.current.liveView = canvas
 
-
+canvas.highPerformance = true
 //Colour
 let paleGreen = Color(hue: 107, saturation: 63, brightness: 75, alpha: 100)
 let offWhite = Color(hue: 87, saturation: 5, brightness: 88, alpha: 100)
@@ -42,59 +36,30 @@ canvas.drawRectangle(at: Point (x: 0, y: 0), width: 400, height: 400)
 //Circles
 for vertical in stride(from: 0, through: 400, by: 40) {
     for horizontal in stride(from: 0, through: 400, by: 40) {
-        if horizontal + vertical == 400 {
+        if horizontal + vertical <= 400 {
             canvas.fillColor = offWhite
         }
-            else if horizontal + vertical == 360 {
-            canvas.fillColor = offWhite
-        }
-        else if horizontal + vertical == 320 {
-        canvas.fillColor = offWhite
-    }
-        else if horizontal + vertical == 280 {
-        canvas.fillColor = offWhite
-    }
-        else if horizontal + vertical == 240 {
-        canvas.fillColor = offWhite
-    }
-        else if horizontal + vertical == 200 {
-        canvas.fillColor = offWhite
-    }
-        else if horizontal + vertical == 160 {
-        canvas.fillColor = offWhite
-    }
-        else if horizontal + vertical == 120 {
-        canvas.fillColor = offWhite
-    }
-        else if horizontal + vertical == 80 {
-        canvas.fillColor = offWhite
-    }
-        else if horizontal + vertical == 40 {
-        canvas.fillColor = offWhite
-    }
+        
         else {
             canvas.fillColor = paleGreen
         }
-        canvas.drawEllipse(at: Point (x: horizontal, y: vertical), width: 40, height: 40)
+        canvas.drawEllipse(at: Point (x: horizontal, y: vertical), width: 36, height: 36)
         canvas.fillColor = paleGreen
-        canvas.drawEllipse(at: Point (x: horizontal, y: 0), width: 40, height: 40)
-        canvas.drawEllipse(at: Point (x: 0, y: vertical), width: 40, height: 40)
+        canvas.drawEllipse(at: Point (x: horizontal, y: 0), width: 36, height: 36)
+        canvas.drawEllipse(at: Point (x: 0, y: vertical), width: 36, height: 36)
     }
 }
-// Show a grid
-canvas.drawAxes(withScale: true, by: 50, color: .black)
-/*:
- ## Show the Live View
- Don't see any results?
- 
- Remember to show the Live View (1 then 2):
- 
- ![timeline](timeline.png "Timeline")
+canvas.textColor = .black
+canvas.drawText(message: "pixies", at: Point (x: 10, y: 405), size: 72, kerning: 0)
+canvas.drawText(message: "saturday", at: Point (x: 15, y: 555), size: 12, kerning: 0)
+canvas.drawText(message: "december 13 1986", at: Point (x: 15, y: 535), size: 12, kerning: 0)
+canvas.drawText(message: "9 pm over 21", at: Point (x: 15, y: 515), size: 12, kerning: 0)
+canvas.drawText(message: "at the rat", at: Point (x: 278, y: 555), size: 12, kerning: 0)
+canvas.drawText(message: "528 commonwealth", at: Point (x: 278, y: 535), size: 12, kerning: 0)
+canvas.drawText(message: "boston, mass.", at: Point (x: 278, y: 515), size: 12, kerning: 0)
+canvas.textColor = .white
+canvas.drawText(message: "with", at: Point (x: 278, y: 460), size: 15, kerning: 0)
+canvas.drawText(message: "throwing muses", at: Point (x: 278, y: 440), size: 15, kerning: 0)
+canvas.drawText(message: "big dipper", at: Point (x: 278, y: 420), size: 15, kerning: 0)
 
- ## Use source control
- To keep your work organized, receive feedback, and earn a high grade in this course, regular use of source control is a must.
- 
- Please commit and push your work often.
- 
- ![source_control](source-control.png "Source Control")
- */
+canvas.highPerformance = false
