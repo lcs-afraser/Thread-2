@@ -37,11 +37,9 @@ PlaygroundPage.current.liveView = canvas
 let lightBlue = Color(hue: 193, saturation: 99, brightness: 86, alpha: 100)
 canvas.fillColor = lightBlue
 canvas.drawRectangle(at: Point (x: 0, y: 0), width: 400, height: 600)
-//Draw a grid
-canvas.drawAxes(withScale: true, by: 50, color: .black)
 // White circles
 let cirlceWhite = Color(hue: 30, saturation: 10, brightness: 100, alpha: 80)
-for someValue in stride(from: 40, through: 400, by: 50) {
+for someValue in stride(from: 38, through: 400, by: 50) {
     someValue
 canvas.drawShapesWithFill = false
 canvas.drawShapesWithBorders = true
@@ -51,7 +49,7 @@ canvas.drawEllipse(at: Point (x: 200, y: 400), width: 400 - someValue, height: 4
 }
 // Purple Circles
 let newColor = Color(hue: 312, saturation: 63, brightness: 66, alpha: 90)
-for someValue in stride(from: 40, through: 400, by: 50) {
+for someValue in stride(from: 38, through: 400, by: 50) {
     someValue
 canvas.drawShapesWithFill = false
 canvas.drawShapesWithBorders = true
