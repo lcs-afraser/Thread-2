@@ -38,9 +38,10 @@ let offWhite = Color(hue: 79, saturation: 5, brightness: 88, alpha: 100)
 canvas.fillColor = brightOrange
 canvas.drawShapesWithFill = true
 canvas.drawRectangle(at: Point (x: -10, y: -10), width: 500, height: 700)
+//Stride
 for height in stride(from: 244.4444444, through: 600, by: 44.44444444) {
     for width in stride(from: 0, through: 400, by: 44.4444444) {
-        //Triangles
+//Triangles
         canvas.drawShapesWithFill = true
         var Triangle: [Point] = []
         Triangle.append(Point (x: width - 44.4444444, y: height - 44.4444444))
@@ -54,7 +55,16 @@ for height in stride(from: 244.4444444, through: 600, by: 44.44444444) {
         }
         canvas.drawCustomShape(with: Triangle)
     }
-}
+}
+//Text
+canvas.textColor = offWhite
+canvas.drawText(message: "talking heads", at: Point (x: 20, y: 140), size: 40, kerning: 0)
+canvas.drawText(message: "friday, saturday, sunday", at: Point (x: 20, y: 35), size: 8, kerning: 0)
+canvas.drawText(message: "september 12, 13, 14, 1975", at: Point (x: 20, y: 20), size: 8, kerning: 0)
+canvas.drawText(message: "at cgbd and omfug", at: Point (x: 150, y: 35), size: 8, kerning: 0)
+canvas.drawText(message: "135 bowery, new york city", at: Point (x: 150, y: 20), size: 8, kerning: 0)
+canvas.drawText(message: "also appearing", at: Point (x: 270, y: 35), size: 8, kerning: 0)
+canvas.drawText(message: "from brooklyn, the shirts", at: Point (x: 270, y: 20), size: 8, kerning: 0)
 // Show a grid
 canvas.drawAxes(withScale: true, by: 50, color: .black)
 canvas.highPerformance = false
