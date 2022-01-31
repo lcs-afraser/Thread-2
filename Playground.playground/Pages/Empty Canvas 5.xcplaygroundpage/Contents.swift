@@ -65,8 +65,7 @@ canvas.drawText(message: "at cgbd and omfug", at: Point (x: 150, y: 35), size: 8
 canvas.drawText(message: "135 bowery, new york city", at: Point (x: 150, y: 20), size: 8, kerning: 0)
 canvas.drawText(message: "also appearing", at: Point (x: 270, y: 35), size: 8, kerning: 0)
 canvas.drawText(message: "from brooklyn, the shirts", at: Point (x: 270, y: 20), size: 8, kerning: 0)
-// Show a grid
-canvas.drawAxes(withScale: true, by: 50, color: .black)
+//High performance
 canvas.highPerformance = false
 /*:
  ## Show the Live View
