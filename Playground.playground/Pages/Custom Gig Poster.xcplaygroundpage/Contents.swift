@@ -66,24 +66,46 @@ for width in stride(from: -100, through: 800, by: 16) {
     canvas.drawLine(from: Point (x: width - 100, y: 150), to: Point (x: 200, y: 1000))
 }
 
-//Middle Cross
+//BIg Cross
 canvas.fillColor = .black
 canvas.drawShapesWithFill = true
-var cross: [Point] = []
-cross.append(Point (x: 150, y: 150))
-cross.append(Point (x: 150, y:  400))
-cross.append(Point (x: 50, y: 400))
-cross.append(Point (x: 50, y: 500))
-cross.append(Point (x: 150, y: 500))
-cross.append(Point (x: 150, y: 600))
-cross.append(Point (x: 250, y: 600))
-cross.append(Point (x: 250, y: 500))
-cross.append(Point (x: 350, y: 500))
-cross.append(Point (x: 350, y: 400))
-cross.append(Point (x: 250, y: 400))
-cross.append(Point (x: 250, y:  150))
-canvas.drawCustomShape(with: cross)
+var bigCross: [Point] = []
+bigCross.append(Point (x: 150, y: 150))
+bigCross.append(Point (x: 150, y:  400))
+bigCross.append(Point (x: 50, y: 400))
+bigCross.append(Point (x: 50, y: 500))
+bigCross.append(Point (x: 150, y: 500))
+bigCross.append(Point (x: 150, y: 600))
+bigCross.append(Point (x: 250, y: 600))
+bigCross.append(Point (x: 250, y: 500))
+bigCross.append(Point (x: 350, y: 500))
+bigCross.append(Point (x: 350, y: 400))
+bigCross.append(Point (x: 250, y: 400))
+bigCross.append(Point (x: 250, y:  150))
+canvas.drawCustomShape(with: bigCross)
 
+//Stride
+for height in stride(from: 150, through: 600, by: 50) {
+    for width in stride(from: 150, through: 250, by: 50) {
+//Triangles
+     //   canvas.fillColor = .white
+       // var bigCross: [Point] = []
+        //bigCross.append(Point (x: width - 0, y: height - 15))
+        //bigCross.append(Point (x: width - 0, y:  height - 0))
+        //bigCross.append(Point (x: width - 0, y: height - 0))
+        //bigCross.append(Point (x: width - 10, y: height - 15))
+       // bigCross.append(Point (x: width - 50, y: height - 25))
+       // bigCross.append(Point (x: width - 50, y: height - 35))
+       // bigCross.append(Point (x: width - 30, y: height - 35))
+       // bigCross.append(Point (x: width - 30, y: height - 50))
+        //bigCross.append(Point (x: width - 30, y: height - 25))
+      //  bigCross.append(Point (x: width - 0, y: height - 25))
+       // bigCross.append(Point (x: width - 0, y: height - 25))
+        //bigCross.append(Point (x: width, y:  height))
+      //  canvas.drawCustomShape(with: bigCross)
+    }
+}
+        
 // Manditory
 canvas.drawAxes(withScale: true, by: 50, color: .green)
 
