@@ -57,17 +57,33 @@ canvas.drawShapesWithFill = true
 canvas.fillColor = .black
 canvas.drawRectangle(at: Point (x: 0, y: 0), width: 400, height: 600)
 
-
-
-
 // Stride
-for width in stride(from: 0, through: 600, by: 12) {
-
-        //lines
-        canvas.defaultLineWidth = 1
-        canvas.lineColor = .white
-        canvas.drawLine(from: Point (x: width - 100, y: 150), to: Point (x: 200, y: 2000))
+for width in stride(from: -100, through: 800, by: 16) {
+    
+    //lines
+    canvas.defaultLineWidth = 1
+    canvas.lineColor = .white
+    canvas.drawLine(from: Point (x: width - 100, y: 150), to: Point (x: 200, y: 1000))
 }
+
+//Middle Cross
+canvas.fillColor = .black
+canvas.drawShapesWithFill = true
+var cross: [Point] = []
+cross.append(Point (x: 150, y: 150))
+cross.append(Point (x: 150, y:  400))
+cross.append(Point (x: 50, y: 400))
+cross.append(Point (x: 50, y: 500))
+cross.append(Point (x: 150, y: 500))
+cross.append(Point (x: 150, y: 600))
+cross.append(Point (x: 250, y: 600))
+cross.append(Point (x: 250, y: 500))
+cross.append(Point (x: 350, y: 500))
+cross.append(Point (x: 350, y: 400))
+cross.append(Point (x: 250, y: 400))
+cross.append(Point (x: 250, y:  150))
+canvas.drawCustomShape(with: cross)
+
 // Manditory
 canvas.drawAxes(withScale: true, by: 50, color: .green)
 
