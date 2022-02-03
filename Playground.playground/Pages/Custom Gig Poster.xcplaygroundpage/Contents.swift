@@ -63,7 +63,7 @@ for width in stride(from: -100, through: 800, by: 16) {
     //lines
     canvas.defaultLineWidth = 1
     canvas.lineColor = .white
-    canvas.drawLine(from: Point (x: width - 200, y: 0), to: Point (x: 200, y: 1500))
+    canvas.drawLine(from: Point (x: width - 200, y: 138), to: Point (x: 200, y: 1500))
 }
 
 //Big Cross
@@ -130,9 +130,6 @@ for height in stride(from: 410, through: 490, by: 20) {
     }
 }
 //Text
-canvas.drawShapesWithBorders = false
-canvas.drawShapesWithFill = true
-canvas.fillColor = .black
 canvas.drawRectangle(at: Point (x: 86, y: 15), width: 220, height: 120)
 canvas.textColor = .red
 canvas.drawText(message: "YEEZUS", at: Point (x: 100, y: 80), size: 50, kerning: 0)
