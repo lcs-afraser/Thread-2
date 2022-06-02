@@ -56,21 +56,27 @@ canvas.drawAxes(withScale: true, by: 20, color: .black)
 
  */
 
-// Begin writing your code below (you can remove the examples shown)
+// Scale
 let scale = 20
+
+// Diagonal
+let diagonal = Int(sqrt(2) * Double(scale))
+
+//Setup
 t.drawSelf()
 t.penUp()
 t.left(by: 90)
 t.forward(steps: 1 * scale)
 t.right(by: 90)
 t.penDown()
+// Draw
 t.forward(steps: 3 * scale)
 t.right(by: 90)
 t.forward(steps: 1 * scale)
 t.left(by: 135)
-t.forward(steps: 2 * scale)
+t.forward(steps: diagonal * 2)
 t.left(by: 90)
-t.forward(steps: 2 * scale)
+t.forward(steps: diagonal * 2)
 t.left(by: 135)
 t.forward(steps: 1 * scale)
 t.right(by: 90)
