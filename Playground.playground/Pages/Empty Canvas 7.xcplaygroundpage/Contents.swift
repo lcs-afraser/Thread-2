@@ -59,17 +59,24 @@ canvas.drawAxes(withScale: true, by: 20, color: .black)
 // Scale
 let scale = 20
 
+// Pen width
+t.lineWidth = 2
+
 // Diagonal
 let diagonal = Int(sqrt(2) * Double(scale))
 
 //Setup
-t.drawSelf()
 t.penUp()
 t.left(by: 90)
 t.forward(steps: 1 * scale)
 t.right(by: 90)
 t.penDown()
+
+//Function
+func drawArrow(){
+
 // Draw
+    t.penDown()
 t.forward(steps: 3 * scale)
 t.right(by: 90)
 t.forward(steps: 1 * scale)
@@ -83,6 +90,88 @@ t.right(by: 90)
 t.forward(steps: 3 * scale)
 t.left(by: 90)
 t.forward(steps: 2 * scale)
+
+// Reposition to Next Arrow
+t.penUp()
+t.left(by: 90)
+t.forward(steps: 5 * scale)
+t.penDown()
+}
+//Draw Arrows
+drawArrow()
+drawArrow()
+drawArrow()
+drawArrow()
+drawArrow()
+
+
+func nextRow() {
+//Setup to Next Row
+t.penUp()
+t.left(by: 90)
+t.forward(steps: 4 * scale)
+t.left(by: 90)
+t.forward(steps: 25 * scale)
+t.right(by: 180)
+}
+//Second Row
+nextRow()
+//Draw Arrows
+drawArrow()
+drawArrow()
+drawArrow()
+drawArrow()
+drawArrow()
+
+//Third Row
+nextRow()
+//Draw Arrows
+drawArrow()
+drawArrow()
+drawArrow()
+drawArrow()
+drawArrow()
+
+//Fourth Row
+nextRow()
+//Draw Arrows
+drawArrow()
+drawArrow()
+drawArrow()
+drawArrow()
+drawArrow()
+
+//Fith Row
+nextRow()
+//Draw Arrows
+drawArrow()
+drawArrow()
+drawArrow()
+drawArrow()
+drawArrow()
+
+//Sixth Row
+nextRow()
+//Draw Arrows
+drawArrow()
+drawArrow()
+drawArrow()
+drawArrow()
+drawArrow()
+
+//Seventh Row
+nextRow()
+//Draw Arrows
+drawArrow()
+drawArrow()
+drawArrow()
+drawArrow()
+drawArrow()
+
+//Show Turtle
+t.drawSelf()
+t.currentPosition()
+t.currentHeading()
 /*:
  ## Show the Live View
  Don't see any results?
