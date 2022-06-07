@@ -112,38 +112,15 @@ func drawSquare() {
 }
 //Draw Row
 func drawEvenRow() {
-drawSquare()
-drawSquare()
-drawSquare()
-drawSquare()
-drawSquare()
-drawSquare()
-drawSquare()
-drawSquare()
-drawSquare()
-drawSquare()
-drawSquare()
-drawSquare()
-drawSquare()
-drawSquare()
-drawSquare()
+    for _ in 1 ... 15 {
+    drawSquare()
+    }
     
 }
 func drawOddRow() {
+    for _ in 1 ... 14 {
     drawSquare()
-    drawSquare()
-    drawSquare()
-    drawSquare()
-    drawSquare()
-    drawSquare()
-    drawSquare()
-    drawSquare()
-    drawSquare()
-    drawSquare()
-    drawSquare()
-    drawSquare()
-    drawSquare()
-    drawSquare()
+    }
 }
 //First Row
 t.penUp()
