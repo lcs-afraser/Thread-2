@@ -1,6 +1,6 @@
 //: [Previous](@previous) / [Next](@next)
 /*:
-## Canvas size
+ ## Canvas size
  
  Set the size of your desired canvas by adjusting the constants on lines 7 and 8.
  */
@@ -51,11 +51,11 @@ canvas.drawAxes(withScale: true, by: 20, color: .black)
  ## Add your code
  
  Beginning on line 61, you can add your own code.
-  
+ 
  [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
-
+ 
  */
-
+canvas.highPerformance = true
 // Scale
 let scale = 20
 
@@ -66,7 +66,11 @@ t.lineWidth = 2
 t.setPenColor(to: .black)
 
 //Start Design
-
+t.penUp()
+t.forward(steps: 100)
+t.left(by: 90)
+t.forward(steps: 100)
+t.right(by: 90)
 //Draw Square
 func drawSquare() {
     //First side
@@ -79,7 +83,7 @@ func drawSquare() {
     t.forward(steps: 1 * scale)
     t.right(by: 60)
     t.forward(steps: 1 * scale)
-
+    
     //Second side
     t.left(by: 180)
     t.forward(steps: 1 * scale)
@@ -89,7 +93,7 @@ func drawSquare() {
     t.forward(steps: 1 * scale)
     t.right(by: 60)
     t.forward(steps: 1 * scale)
-
+    
     //Third side
     t.penUp()
     t.right(by: 120)
@@ -97,7 +101,7 @@ func drawSquare() {
     t.left(by: 60)
     t.forward(steps: 1 * scale)
     t.penDown()
-    t.beginFill()
+    // t.beginFill()
     t.right(by: 120)
     t.forward(steps: 1 * scale)
     t.right(by: 60)
@@ -106,20 +110,38 @@ func drawSquare() {
     t.forward(steps: 1 * scale)
     t.right(by: 60)
     t.forward(steps: 1 * scale)
-    t.right(by: 30)
-    t.endFill()
-
+    t.right(by: 120)
+    
+    t.drawSelf()
+    t.currentPosition()
+    t.currentHeading()
+    
+    //Fill side
+    for _ in 1 ... 10 {
+        t.forward(steps: 1 * scale)
+        t.right(by: 60)
+        t.forward(steps: 1)
+        t.right(by: 120)
+        t.forward(steps: 1 * scale)
+        t.left(by: 120)
+        t.forward(steps: 1)
+        t.left(by: 60)
+        
+    }
 }
+
+
+drawSquare()
 //Draw Row
 func drawEvenRow() {
     for _ in 1 ... 15 {
-    drawSquare()
+        drawSquare()
     }
     
 }
 func drawOddRow() {
     for _ in 1 ... 14 {
-    drawSquare()
+        drawSquare()
     }
 }
 //First Row
@@ -244,6 +266,8 @@ drawEvenRow()
 t.drawSelf()
 t.currentPosition()
 t.currentHeading()
+
+canvas.highPerformance = false
 /*:
  ## Show the Live View
  Don't see any results?
@@ -251,7 +275,7 @@ t.currentHeading()
  Remember to show the Live View (1 then 2):
  
  ![timeline](timeline.png "Timeline")
-
+ 
  ## Use source control
  To keep your work organized, receive feedback, and earn a high grade in this course, regular use of source control is a must.
  
