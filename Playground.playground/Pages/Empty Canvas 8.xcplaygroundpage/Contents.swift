@@ -129,13 +129,13 @@ func drawSquare() {
 
 //Draw Row
 func evenRow() {
-    for _ in 1 ... 16 {
+    for _ in 1 ... 15 {
         drawSquare()
     }
 
 }
 func oddRow() {
-    for _ in 1 ... 15 {
+    for _ in 1 ... 14 {
         drawSquare()
     }
 }
