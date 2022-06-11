@@ -66,16 +66,11 @@ t.lineWidth = 2
 t.setPenColor(to: .black)
 
 //Start Design
-t.penUp()
-t.forward(steps: 100)
-t.left(by: 90)
-t.forward(steps: 100)
-t.right(by: 90)
+
 //Draw Square
 func drawSquare() {
     //First side
     t.penDown()
-    t.left(by: 30)
     t.forward(steps: 1 * scale)
     t.right(by: 60)
     t.forward(steps: 1 * scale)
@@ -93,7 +88,7 @@ func drawSquare() {
     t.forward(steps: 1 * scale)
     t.right(by: 60)
     t.forward(steps: 1 * scale)
-    
+
     //Third side
     t.penUp()
     t.right(by: 120)
@@ -101,7 +96,6 @@ func drawSquare() {
     t.left(by: 60)
     t.forward(steps: 1 * scale)
     t.penDown()
-    // t.beginFill()
     t.right(by: 120)
     t.forward(steps: 1 * scale)
     t.right(by: 60)
@@ -111,11 +105,7 @@ func drawSquare() {
     t.right(by: 60)
     t.forward(steps: 1 * scale)
     t.right(by: 120)
-    
-    t.drawSelf()
-    t.currentPosition()
-    t.currentHeading()
-    
+
     //Fill side
     for _ in 1 ... 10 {
         t.forward(steps: 1 * scale)
@@ -126,21 +116,26 @@ func drawSquare() {
         t.left(by: 120)
         t.forward(steps: 1)
         t.left(by: 60)
-        
+
     }
+
+    //Reposition Turtle
+        t.penUp()
+        t.left(by: 120)
+        t.forward(steps: 1 * scale)
+        t.penDown()
+
 }
 
-
-drawSquare()
 //Draw Row
-func drawEvenRow() {
-    for _ in 1 ... 15 {
+func evenRow() {
+    for _ in 1 ... 16 {
         drawSquare()
     }
-    
+
 }
-func drawOddRow() {
-    for _ in 1 ... 14 {
+func oddRow() {
+    for _ in 1 ... 15 {
         drawSquare()
     }
 }
@@ -149,7 +144,8 @@ t.penUp()
 t.left(by: 90)
 t.forward(steps: 30)
 t.right(by: 90)
-drawOddRow()
+t.left(by: 30)
+oddRow()
 
 //Second row
 t.penUp()
@@ -157,8 +153,9 @@ t.goToHome()
 t.left(by: 90)
 t.forward(steps: 60)
 t.right(by: 90)
-t.forward(steps: 16)
-drawEvenRow()
+t.forward(steps: 17)
+t.left(by: 30)
+evenRow()
 
 //Third Row
 t.penUp()
@@ -166,7 +163,8 @@ t.goToHome()
 t.left(by: 90)
 t.forward(steps: 90)
 t.right(by: 90)
-drawOddRow()
+t.left(by: 30)
+oddRow()
 
 //Fourth row
 t.penUp()
@@ -174,8 +172,9 @@ t.goToHome()
 t.left(by: 90)
 t.forward(steps: 120)
 t.right(by: 90)
-t.forward(steps: 16)
-drawEvenRow()
+t.forward(steps: 17)
+t.left(by: 30)
+evenRow()
 
 //Fith Row
 t.penUp()
@@ -183,7 +182,8 @@ t.goToHome()
 t.left(by: 90)
 t.forward(steps: 150)
 t.right(by: 90)
-drawOddRow()
+t.left(by: 30)
+oddRow()
 
 //Sixth row
 t.penUp()
@@ -191,8 +191,9 @@ t.goToHome()
 t.left(by: 90)
 t.forward(steps: 180)
 t.right(by: 90)
-t.forward(steps: 16)
-drawEvenRow()
+t.forward(steps: 17)
+t.left(by: 30)
+evenRow()
 
 //Seventh Row
 t.penUp()
@@ -200,7 +201,8 @@ t.goToHome()
 t.left(by: 90)
 t.forward(steps: 210)
 t.right(by: 90)
-drawOddRow()
+t.left(by: 30)
+oddRow()
 
 //Eighth row
 t.penUp()
@@ -208,8 +210,9 @@ t.goToHome()
 t.left(by: 90)
 t.forward(steps: 240)
 t.right(by: 90)
-t.forward(steps: 16)
-drawEvenRow()
+t.forward(steps: 17)
+t.left(by: 30)
+evenRow()
 
 //Ninth Row
 t.penUp()
@@ -217,7 +220,8 @@ t.goToHome()
 t.left(by: 90)
 t.forward(steps: 270)
 t.right(by: 90)
-drawOddRow()
+t.left(by: 30)
+oddRow()
 
 //Tenth row
 t.penUp()
@@ -225,8 +229,9 @@ t.goToHome()
 t.left(by: 90)
 t.forward(steps: 300)
 t.right(by: 90)
-t.forward(steps: 16)
-drawEvenRow()
+t.forward(steps: 17)
+t.left(by: 30)
+evenRow()
 
 //Eleventh Row
 t.penUp()
@@ -234,7 +239,8 @@ t.goToHome()
 t.left(by: 90)
 t.forward(steps: 330)
 t.right(by: 90)
-drawOddRow()
+t.left(by: 30)
+oddRow()
 
 //Twelvth row
 t.penUp()
@@ -242,8 +248,9 @@ t.goToHome()
 t.left(by: 90)
 t.forward(steps: 360)
 t.right(by: 90)
-t.forward(steps: 16)
-drawEvenRow()
+t.forward(steps: 17)
+t.left(by: 30)
+evenRow()
 
 //Thirteenth Row
 t.penUp()
@@ -251,7 +258,8 @@ t.goToHome()
 t.left(by: 90)
 t.forward(steps: 390)
 t.right(by: 90)
-drawOddRow()
+t.left(by: 30)
+oddRow()
 
 //Fourteenth row
 t.penUp()
@@ -259,8 +267,9 @@ t.goToHome()
 t.left(by: 90)
 t.forward(steps: 420)
 t.right(by: 90)
-t.forward(steps: 16)
-drawEvenRow()
+t.forward(steps: 17)
+t.left(by: 30)
+evenRow()
 
 //Show Turtle
 t.drawSelf()
