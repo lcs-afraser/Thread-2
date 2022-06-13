@@ -4,8 +4,8 @@
  
  Set the size of your desired canvas by adjusting the constants on lines 7 and 8.
  */
-let preferredWidth = 600
-let preferredHeight = 600
+let preferredWidth = 1000
+let preferredHeight = 1000
 /*:
  ## Required code
  
@@ -129,7 +129,7 @@ func drawSquare() {
 
 //Draw Row
 func evenRow() {
-    for _ in 1 ... 15 {
+    for _ in 1 ... 14 {
         drawSquare()
     }
 
@@ -272,7 +272,7 @@ t.left(by: 30)
 evenRow()
 
 //Show Turtle
-t.drawSelf()
+//t.drawSelf()
 t.currentPosition()
 t.currentHeading()
 
